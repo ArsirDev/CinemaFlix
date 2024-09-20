@@ -19,10 +19,11 @@ import com.arsir.splash_screen.screen.section.SplashSection
 internal fun SplashScreen(modifier: Modifier = Modifier) {
     var onBack by remember { mutableIntStateOf(0) }
     val context = LocalContext.current
+
     BackHandler {
-        if (onBack > 1) (context as Activity).finish()
+        if (onBack >= 1) (context as Activity).finish()
         onBack += 1
-        Toast.makeText(context, "Tekan kembali sekali lagi untuk keluar", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Tekan sekali lagi untuk keluar", Toast.LENGTH_SHORT).show()
     }
     Surface(
         modifier = modifier,

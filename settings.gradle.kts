@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "CinemaFlix"
 include(":app")
 include(":feature:splash-screen")
+include(":feature:onboarding")
