@@ -1,7 +1,6 @@
 package com.arsir.splash_screen.screen
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -21,8 +20,8 @@ class SplashActivity : ComponentActivity() {
             CinemaFlixTheme {
                 LaunchedEffect(Unit) {
                     delay(5_000L)
-                    Toast.makeText(this@SplashActivity, "Navigate to another screen", Toast.LENGTH_SHORT).show()
                 }
+
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     SplashScreen(modifier = Modifier.padding(paddingValues = innerPadding))
                 }
